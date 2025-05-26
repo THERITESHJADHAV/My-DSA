@@ -1,6 +1,9 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        for i in range(len(nums)-1):
-            for j in range(i+1,len(nums)):
+
+        for i in range(len(nums)-1):                        # first for loop, for choosing first number 
+                                                            # -1 is used, so that i will never reached to last element in a list
+            for j in range(i+1,len(nums)):                  # second for loop, for choosing second number
+                                                            # i+1 , beacuse we don't want a same repeated numbers, so it won't consider i again
                 if nums[i] + nums[j] == target :
-                    return([i,j])
+                    return([i,j])                           # because  we want to display only index and not the numbers
