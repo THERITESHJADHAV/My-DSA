@@ -1,0 +1,24 @@
+# we will use two pointers (i,j) for solving
+# i-------> 1) will give number of unique vaules 
+            2) position where the new element to be inserted
+# j-------> 1) for traversing in an array
+
+
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:                                    
+        if not nums:                                                                         # this is for condition where there is no element in an array
+            return 0
+
+        i = 0  
+        for j in range(1, len(nums)):                                                        # j will traverse from 2nd number to the last number in an array
+            if nums[i] != nums[j]:                                                           # it will check the two consecutive numbers are same or different
+                i += 1                                                                       # if different it wil first increment the position where new element is to inserted and 
+                nums[i] = nums[j]                                                            # paste that new element in the desired position
+        return i + 1
+
+
+
+Probllem approch:
+    we will check the two consecutive numbers are same or not. if they are not same then put that second element in the next position of first element. and continue this unti the last 
+number in the array
