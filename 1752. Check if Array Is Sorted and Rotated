@@ -1,0 +1,15 @@
+class Solution(object):
+    def check(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        sorted_array = sorted(nums)
+        length = len(sorted_array)
+
+        for i in range(length):
+            rotated = sorted_array[i:] + sorted_array[:i]  # left rotate by i
+            if rotated == nums:
+                return True
+
+        return False
