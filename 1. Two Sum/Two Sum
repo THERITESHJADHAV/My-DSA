@@ -7,3 +7,4 @@ class Solution(object):
                                                             # i+1 , beacuse we don't want a same repeated numbers, so it won't consider i again
                 if nums[i] + nums[j] == target :
                     return([i,j])                           # because  we want to display only index and not the numbers
+
